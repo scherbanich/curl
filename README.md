@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/scherbanich/curl.svg?branch=master)](https://travis-ci.org/scherbanich/curl.svg)
+
 Usage Request class
 -----
 
