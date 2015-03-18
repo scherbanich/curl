@@ -10,7 +10,6 @@ $command_server = sprintf(
     __DIR__.'/remote'
 );
 
-
 $output = array();
 exec($command_server, $output);
 
@@ -20,19 +19,7 @@ if (!isset($output[0])) {
 
 $pid_server = (int) $output[0];
 
-/*
-echo sprintf(
-        'SSL tunnel started on port %d with PID %d',
-        WEB_SERVER_PORT_SSL,
-        $pid_stunnel
-    ).PHP_EOL.PHP_EOL;*/
-
-// Kill the web server when the process ends
-register_shutdown_function(function () use ($pid_server, $pid_stunnel) {
-   /* echo sprintf(
-            'Killing php process with ID %d',
-            $pid_server
-        ).PHP_EOL;*/
+register_shutdown_function(function () use ($pid_server) {
     exec('kill '.$pid_server.' >/dev/null 2>&1');
 });
 
