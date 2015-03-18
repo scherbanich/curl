@@ -1,5 +1,26 @@
 [![Build Status](https://travis-ci.org/scherbanich/curl.svg?branch=master)](https://travis-ci.org/scherbanich/curl)
 
+## Requirements
+
+1. PHP 5.4+
+2. libcurl
+
+## Install
+
+### Using Composer
+
+Just add the following to the require section your composer.json file:
+
+```
+"scherbanich/curl": "dev-master"
+```
+
+Then execute `composer install` to pull down the latest release.
+
+Package details can be found at https://packagist.org/packages/scherbanich/curl.
+
+## Examples
+
 Usage Request class
 -----
 
