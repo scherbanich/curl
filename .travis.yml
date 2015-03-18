@@ -13,10 +13,7 @@ before_script:
     - echo "extension=php_curl.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
     - ~/.phpenv/versions/$(phpenv version-name)/sbin/php-fpm
     - sudo cp tests/remote/vhosts.conf /etc/apache2/sites-available/default
-    - sudo sed "s?%TRAVIS_BUILD_DIR%?$(pwd)?g" --in-place /etc/apache2/sites-available/default
     - sudo service apache2 restart
     - sleep 5
-    - php -i
-    - cat ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
 script:
-  - vendor/bin/phpunit -c phpunit.ci.xml
+  - vendor/bin/phpunit -c phpunit.ci.xmlзрз -ш
