@@ -11,9 +11,6 @@
     "php": ">=5.4",
     "ext-curl": "*"
   },
-  "require-dev": {
-    "phpunit": "3.7.*"
-  },
   "authors": [
     {
       "name": "Philip Shcherbanich",
