@@ -16,4 +16,4 @@ before_script:
     - sudo service apache2 restart
     - sleep 5
 script:
-  - vendor/bin/phpunit -c phpunit.ci.xmlзрз -ш
+  - vendor/bin/phpunit -c phpunit.ci.xml
