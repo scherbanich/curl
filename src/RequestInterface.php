@@ -42,7 +42,7 @@ interface RequestInterface {
 
     public function setBasicAuthentication($username, $password);
 
-    public function setProxy($proxy, $type, $username, $password = '', $type_auth = CURLAUTH_BASIC);
+    public function setProxy($proxy, $type, $username = '', $password = '', $type_auth = CURLAUTH_BASIC);
 
     public function setMethod($name);
 
