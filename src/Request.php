@@ -239,7 +239,7 @@ class Request implements RequestInterface {
         return $this;
     }
 
-    public function setProxy($proxy, $type, $username = '', $password = '', $type_auth = CURLAUTH_BASIC){
+    public function setProxy($proxy, $type = '', $username = '', $password = '', $type_auth = CURLAUTH_BASIC){
 
         if($type=='SOCKS5')
             $this->setOpt(CURLOPT_PROXYTYPE, CURLPROXY_SOCKS5);
