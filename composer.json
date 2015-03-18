@@ -1,20 +1,29 @@
 {
   "name": "scherbanich/curl",
+  "type": "library",
   "description": "CURL class php",
   "keywords": [
-    "curl","php"
+    "curl","php", "client", "HTTP client", "http", "rest"
   ],
   "minimum-stability": "stable",
   "license": "MIT",
+  "require": {
+    "php": ">=5.4",
+    "ext-curl": "*"
+  },
   "authors": [
     {
       "name": "Philip Shcherbanich",
       "email": "filippf@bk.ru"
     }
   ],
+  "scripts": {
+    "test": "phpunit"
+  },
   "autoload": {
-    "classmap": [
-      "src/"
-    ]
+    "psr-0": {
+      "curl": "src/",
+      "tests": "tests/"
+    }
   }
 }
