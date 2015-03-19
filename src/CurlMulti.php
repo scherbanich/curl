@@ -43,6 +43,12 @@ class CurlMulti implements CurlMultiInterface {
         return $this;
     }
 
+
+    public function findRequestById($id){
+
+        return isset($this->requests[$id])?$this->requests[$id]:null;
+    }
+
     public function addRequest(Request $data){
 
         $curl = $data->getResource();
