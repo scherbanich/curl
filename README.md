@@ -12,7 +12,7 @@
 Just add the following to the require section your composer.json file:
 
 ```
-"scherbanich/curl": "dev-master"
+"scherbanich/curl": "0.9-dev"
 ```
 
 Then execute `composer install` to pull down the latest release.
