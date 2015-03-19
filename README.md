@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/shcherbanich/curl.svg?branch=master)](https://travis-ci.org/shcherbanich/curl)
-
+[![Dependency Status](https://www.versioneye.com/user/projects/550a7bd14996ebef3300074a/badge.svg?style=flat)](https://www.versioneye.com/user/projects/550a7bd14996ebef3300074a)
 ## Requirements
 
 1. PHP 5.4+
