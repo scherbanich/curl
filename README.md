@@ -17,7 +17,7 @@ Just add the following to the require section your composer.json file:
 
 Then execute `composer install` to pull down the latest release.
 
-Package details can be found at https://packagist.org/packages/scherbanich/curl.
+Package details can be found at https://packagist.org/packages/shcherbanich/curl.
 
 ## Examples
 
