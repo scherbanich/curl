@@ -21,10 +21,10 @@
     "test": "phpunit"
   },
   "autoload": {
-    "psr-0": {
-      "curl": "src/",
-      "tests": "tests/"
-    }
+    "classmap": [
+      "src/",
+      "tests/"
+    ]
   },
   "extra": {
     "branch-alias": {
