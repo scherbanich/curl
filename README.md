@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/scherbanich/curl.svg?branch=master)](https://travis-ci.org/scherbanich/curl)
+[![Build Status](https://travis-ci.org/shcherbanich/curl.svg?branch=master)](https://travis-ci.org/shcherbanich/curl)
 
 ## Requirements
 
