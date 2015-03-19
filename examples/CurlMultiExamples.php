@@ -18,7 +18,7 @@
 
 
 
-    $request = new \curl\Request('https://github.com/scherbanich',1, $callback);
+    $request = new \curl\Request('https://github.com/shcherbanich',1, $callback);
 
     $request
             ->setMethod('GET')
@@ -53,3 +53,18 @@
 
 
     echo "Get result: ".strlen($request->result);
+
+
+    echo "<br><hr>";
+
+    $curlMulti = new \curl\CurlMulti();
+
+    $curlMulti->createRequest('https://github.com/shcherbanich', 2, function($r,$d){
+
+        print_r(strlen($d));
+
+    }, array(CURLOPT_RETURNTRANSFER => true));
+
+    $curlMulti->start();
+
+    $curlMulti->close();

@@ -21,6 +21,7 @@
     <testsuite>
       <directory>./tests</directory>
       <file>./tests/TestRequest.php</file>
+      <file>./tests/TestCurlMulti.php</file>
     </testsuite>
   </testsuites>
   <filter>
