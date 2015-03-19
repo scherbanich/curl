@@ -57,6 +57,12 @@ class CurlMulti implements CurlMultiInterface {
     }
 
 
+    public function createRequest($url, $id, $callback = null, $options = array()){
+
+        return $this->addRequest(new Request($url, $id, $callback, $options));
+    }
+
+
     public function start(){
 
         $active = null;
