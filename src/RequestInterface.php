@@ -56,6 +56,8 @@ interface RequestInterface {
 
     public function addParams($name, $value);
 
+    public function build_query($value = false);
+
     public function getParams($key = false);
 
     public function removeParams($name);

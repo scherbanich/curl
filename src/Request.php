@@ -18,6 +18,8 @@ class Request implements RequestInterface {
 
     private $userAgent = '';
 
+    private $build = false;
+
     public $ResponseCallback = null;
 
     public $result = null;
@@ -121,7 +123,10 @@ class Request implements RequestInterface {
 
     private function saveParams(){
 
-        $params = http_build_query($this->params, null, '&');
+        if($this->build)
+            $params = http_build_query($this->params, null, '&');
+        else
+            $params = $this->params;
 
         return $this->setOpt(CURLOPT_POSTFIELDS, $params);
     }
@@ -138,6 +143,16 @@ class Request implements RequestInterface {
         $this->params[$name] = $value;
 
         return $this->saveParams();
+    }
+
+    public function build_query($value = false){
+
+        if($value)
+            $this->build = true;
+        else
+            $this->build = false;
+
+        return $this;
     }
 
     public function removeParams($name){
