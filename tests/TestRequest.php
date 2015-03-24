@@ -175,6 +175,7 @@ class TestRequest extends \PHPUnit_Framework_TestCase {
 
         $request
             ->is_put()
+            ->build_query(true)
             ->setParams(
                 array(
                     'tab' => 'repositories'
@@ -207,6 +208,7 @@ class TestRequest extends \PHPUnit_Framework_TestCase {
 
         $request
             ->is_delete()
+            ->build_query(true)
             ->setParams(
                 array(
                     'tab' => 'repositories'
@@ -238,6 +240,7 @@ class TestRequest extends \PHPUnit_Framework_TestCase {
 
         $request
             ->setMethod('PATCH')
+            ->build_query(true)
             ->setParams(
                 array(
                     'tab' => 'repositories'
