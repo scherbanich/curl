@@ -10,5 +10,5 @@ interface CurlMultiInterface {
 
     public function findRequestById($id);
 
-    public function close();
+    public function close($all = true);
 }

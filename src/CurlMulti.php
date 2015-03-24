@@ -97,8 +97,6 @@ class CurlMulti implements CurlMultiInterface {
                         $request->setResponse($content);
 
                         curl_multi_remove_handle($this->cmh, $ch);
-
-                        $request->close();
                     }
                 }
                 while ($mrc == CURLM_CALL_MULTI_PERFORM);
@@ -108,11 +106,19 @@ class CurlMulti implements CurlMultiInterface {
         return $this->requests;
     }
 
-    public function close(){
+    public function close($all = true){
 
         $this->tasks->removeAllExcept(new \SplObjectStorage());
 
         curl_multi_close($this->cmh);
+
+        if($all && is_array($this->requests)){
+            foreach($this->requests as $v){
+
+                if($v->getResource())
+                    $v->close();
+            }
+        }
 
         return $this;
     }
