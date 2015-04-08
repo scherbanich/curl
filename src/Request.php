@@ -126,7 +126,7 @@ class Request implements RequestInterface {
         if($this->build)
             $params = http_build_query($this->params, null, '&');
         else
-            $params = $this->params;
+            $params = urldecode(http_build_query($this->params));
 
         return $this->setOpt(CURLOPT_POSTFIELDS, $params);
     }
