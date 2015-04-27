@@ -236,14 +236,11 @@ class Request implements RequestInterface {
 
     public function setCookieFile($patch, $save = false){
 
-        if(file_exists($patch)){
-
-            if($save)
-                $this->setOpt(CURLOPT_COOKIEJAR, $patch);
-
-            $this->setOpt(CURLOPT_COOKIEFILE, $patch);
-        }
-
+        $this->setOpt(CURLOPT_COOKIEFILE, $patch);
+        
+        if($save)
+            $this->setOpt(CURLOPT_COOKIEJAR, $patch);
+        
         return $this;
     }
 
